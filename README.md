@@ -19,28 +19,25 @@ Developed by: S.E.Elamaran
 RegisterNumber: 
 '''
 import numpy as np
-import matplotlib.pyplot as plt
-
-X = np.array(eval(input()))
-Y = np.array(eval(input()))
-
-Xmean = np.mean(X)
-Ymean = np.mean(Y)
-num,den = 0,0
+X=np.array(eval(input()))
+Y=np.array(eval(input()))
+x_mean=np.mean(X)
+y_mean=np.mean(Y)
+num=0
+denom=0
 for i in range(len(X)):
-    num += (X[i]-Xmean)*(Y[i]-Ymean)
-    den += (X[i]-Xmean)**2
-m = num/den
-c = Ymean-m*Xmean
-    
-print (m, c)
-
-Y_pred = m*X + c
-print (Y_pred)
+    num+=(X[i]-x_mean)*(Y[i]-y_mean)
+    denom+=(X[i]-x_mean)**2
+m = num/denom
+c=y_mean - (m*x_mean)
+print(m,c)
+Y_pred=m*X+c
+print(Y_pred)
 
 plt.scatter(X,Y)
 plt.plot(X,Y_pred,color="purple")
 plt.show()
+
 
 ```
 ## Sample Input 

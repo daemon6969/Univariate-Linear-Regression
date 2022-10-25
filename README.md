@@ -35,7 +35,7 @@ Y_pred=m*X+c
 print(Y_pred)
 
 plt.scatter(X,Y)
-plt.plot(X,Y_pred,color="purple")
+plt.plot(X,Y_pred,color="red")
 plt.show()
 
 
